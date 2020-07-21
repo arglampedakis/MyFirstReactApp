@@ -4,6 +4,13 @@ import './style.css';
 import Post from './components/Post.jsx';
 import YouTubeVideo from './components/YouTubeVideo.jsx';
 import Progress from './components/Progress.jsx';
+import Youdemy from './components/Youdemy.jsx';
+// import PreactCustomName from './libs';
+// import { show, draw } from './libs';
+
+// PreactCustomName();
+// show();
+// draw();
 
 // <Navigation></Navigation>
 function Navigation() {
@@ -57,7 +64,9 @@ function App() {
         <div>
             <Navigation />
             <h1>App</h1>
-            <Progress value="20" r="90"></Progress>
+            <Progress value="20"></Progress>
+            <Progress value="50"></Progress>
+            <Progress value="80"></Progress>
             {
                 data.map(function (video) {
 
@@ -80,7 +89,6 @@ function App() {
                     )
                 })
             }
-            <Progress></Progress>
             {/* <Post title="React" >Will <mark>change</mark> your life!</Post>
             <Post title="JavaScript" color="hotpink" >This <i>language</i> rocks.</Post>
             <Post title="PeopleCode" color="skyblue">My company.</Post> */}
@@ -88,4 +96,4 @@ function App() {
     );
 }
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<Youdemy />, document.getElementById('root'));
