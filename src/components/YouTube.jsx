@@ -16,7 +16,7 @@ export default function YouTube(props) {
     }, 
     [ likes ]);
 
-    const [dislikes, setdislikes] = useState("Hi!"); //dislikes = 0
+    const [dislikes, setDislikes] = useState("Hi!"); //dislikes = 0
     function handleLikeClick() {
         console.log("Like Clicked!");
         setLikes(parseInt(likes) + 1);
@@ -24,7 +24,7 @@ export default function YouTube(props) {
 
     function handleDislikeClick() {
         console.log("Dislike Clicked!");
-        setdislikes(dislikes + "!");
+        setDislikes(dislikes + "!");
     }
 
     return (
