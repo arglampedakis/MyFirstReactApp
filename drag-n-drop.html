@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag and Drop</title>
+</head>
+
+<body>
+    <h1>Drag and Drop</h1>
+    <div id="draggable" draggable="true"> Draggable Element </div>
+
+    <div id="drop-target"> Drop Target </div>
+
+    <script>
+        let dropTarget = document.querySelector("#drop-target");
+
+        function handleDragOver(event) { event.preventDefault(); }
+
+        dropTarget.addEventListener("dragover", handleDragOver);
+
+        // ...Code from Part 1/2
+        let draggable = document.querySelector("#draggable");
+
+        draggable.addEventListener("dragstart", handleDragStart);
+
+        function handleDragStart(e) {
+            e.dataTransfer.setData("text/plain", draggable.innerHTML);
+            console.log("dragstart: ", e);
+        }
+
+        dropTarget.addEventListener("drop", handleDrop);
+
+        function handleDrop(e) {
+            let data = e.dataTransfer.getData("text/plain");
+            console.log("Dropped: ", data);
+            dropTarget.innerHTML = dropTarget.innerHTML + " " + data;
+        }
+
+
+    </script>
+</body>
+
+</html>
